@@ -1,15 +1,11 @@
 table {
-    width: 99%;
-  }
-
-  .example-paginator{
-    width: 100%;
-    margin: 10px;
-
+    width: 80%;
+    margin: 0 auto;
+    height: 200px;
   }
 
   .example-card{
-    width: 80%;
-    margin: 10px;
-
+    width: 65%;
+    margin: 10px auto;
+    height: 500px;
   }

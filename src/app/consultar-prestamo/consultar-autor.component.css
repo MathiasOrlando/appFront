@@ -1,0 +1,11 @@
+table {
+    width: 80%;
+    margin: 0 auto;
+    height: 200px;
+  }
+
+  .example-card{
+    width: 65%;
+    margin: 10px auto;
+    height: 500px;
+  }

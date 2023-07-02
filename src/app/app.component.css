@@ -12,3 +12,11 @@
     width: 8%;
   
   }  
+  .custom-navlist {
+    background-color: #ff0000; /* Cambia #ff0000 por el color deseado */
+    color: #ffffff; /* Cambia #ffffff por el color deseado */
+  }
+  .custom-content {
+    background-color: #f0f0f0; /* Cambia #f0f0f0 por el color deseado */
+  }
+  
