@@ -1,11 +1,13 @@
  
   .example-full-width {
-    width: 97%;
+    width: 80%;
     margin: 0 auto;
   }
-
+  .text-center {
+    text-align: center;
+  }
   .example-card {
-    max-width: 80%;
-    margin: 20px;
+    max-width: 40%;
+    margin: 50px auto;
     
   }
