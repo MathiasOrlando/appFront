@@ -16,7 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ConsultarCiudadComponent } from './consultar-ciudad/consultar-ciudad.component';
-import { EditarCiudadComponent } from './editar-ciudad/editar-ciudad.component';
+import { MatExpansionModule } from '@angular/material/expansion';import { EditarCiudadComponent } from './editar-ciudad/editar-ciudad.component';
 import { NgModule } from '@angular/core';
 import { ConsultarLibroComponent } from './consultar-libro/consultar-libro.component';
 import { EditarLibroComponent } from './editar-libro/editar-libro.component';
@@ -61,7 +61,8 @@ import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.componen
     MatCardModule, 
     MatSnackBarModule,
     MatPaginatorModule,
-    MatSelectModule 
+    MatSelectModule, 
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,7 +3,9 @@ table {
   margin: 0 auto;
   height: 200px;  
 }
-
+.text-center {
+  text-align: center;
+}
 .example-card{
   width: 65%;
   margin: 10px auto;
