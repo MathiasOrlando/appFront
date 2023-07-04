@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTableDataSource } from '@angular/material/table';
@@ -16,6 +18,7 @@ export class ConsultarCiudadComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator | undefined ;
 
   constructor(
+    private dialog: MatDialog,
     private _snackBar: MatSnackBar
   ) { }
 
@@ -41,6 +44,13 @@ export class ConsultarCiudadComponent implements OnInit {
 
 
   borrar = (codigo: number) => {
+    const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+      width: '250px',
+      data: { message: '¿Estás seguro de que quieres borrar este usuario?' }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === true) {
     //axios.delete("http://localhost:8080/PROYECTO-REST/rest/ciudad/delete/" + codigo).then(resultado=>{
     axios.delete<any>(`http://localhost:8080/PROYECTO-REST/rest/ciudad/delete/${codigo}`).then(resultado => {
 
@@ -63,5 +73,5 @@ export class ConsultarCiudadComponent implements OnInit {
     });
   }
 
-}
-
+})
+  }}

@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -26,6 +27,7 @@ import { ConsultarAutorComponent } from './consultar-autor/consultar-autor.compo
 import { EditarAutorComponent } from './editar-autor/editar-autor.component';
 import { ConsultarUsuarioComponent } from './consultar-usuario/consultar-usuario.component';
 import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.component';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 
 
 @NgModule({
@@ -41,6 +43,7 @@ import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.componen
     EditarAutorComponent,
     ConsultarUsuarioComponent,
     EditarUsuarioComponent,
+    ConfirmDialogComponent,
   
 
   ],
@@ -51,6 +54,7 @@ import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.componen
     MatToolbarModule,
     MatIconModule,
     MatSidenavModule,
+    MatDialogModule,
     MatListModule,
     MatTableModule,
     MatButtonModule,
