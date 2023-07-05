@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ConsultarCiudadComponent } from './consultar-ciudad/consultar-ciudad.component';
+import { ConsultarCiudadComponent } from '../app/Pages/consultar-ciudad/consultar-ciudad.component';
 import { EditarCiudadComponent } from './editar-ciudad/editar-ciudad.component';
-import{ ConsultarLibroComponent } from './consultar-libro/consultar-libro.component';
+import{ ConsultarLibroComponent } from '../app/Pages/consultar-libro/consultar-libro.component';
 import{ EditarLibroComponent } from './editar-libro/editar-libro.component';
-import{ ConsultarClienteComponent} from './consultar-cliente/consultar-cliente.component';
+import{ ConsultarClienteComponent} from '../app/Pages/consultar-cliente/consultar-cliente.component';
 import{ EditarClienteComponent} from './editar-cliente/editar-cliente.component';
-import{ ConsultarAutorComponent} from './consultar-autor/consultar-autor.component';
+import{ ConsultarAutorComponent} from './Pages/consultar-autor/consultar-autor.component';
 import{ EditarAutorComponent} from './editar-autor/editar-autor.component';
-import{ ConsultarUsuarioComponent} from './consultar-usuario/consultar-usuario.component';
+import{ ConsultarUsuarioComponent} from '../app/Pages/consultar-usuario/consultar-usuario.component';
 import{ EditarUsuarioComponent} from './editar-usuario/editar-usuario.component';
 //import{ ConsultarPrestamoComponent} from './consultar-prestamo/consultar-prestamo.component';
 

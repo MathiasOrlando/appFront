@@ -1,19 +1,19 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
+import { ConfirmDialogComponent } from '../../confirm-dialog/confirm-dialog.component';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTableDataSource } from '@angular/material/table';
 import axios from 'axios';
 
-@Component({
-  selector: 'app-consultar-cliente',
-  templateUrl: './consultar-cliente.component.html',
-  styleUrls: ['./consultar-cliente.component.css']
-})
-export class ConsultarClienteComponent implements OnInit {
 
-  displayedColumns: string[] = ['codigo', 'nombre','ciudad','direccion','obs', 'actions'];
+@Component({
+  selector: 'app-consultar-autor',
+  templateUrl: './consultar-autor.component.html',
+  styleUrls: ['./consultar-autor.component.css']
+})
+export class ConsultarAutorComponent implements OnInit {
+  displayedColumns: string[] = ['codigo', 'nombre', 'actions'];
   dataSource: any = [];
   @ViewChild(MatPaginator) paginator: MatPaginator | undefined ;
 
@@ -27,7 +27,7 @@ export class ConsultarClienteComponent implements OnInit {
     this.consultar();
   }
   consultar = () => {
-    axios.get<any>("http://localhost:8080/PROYECTO-REST/rest/cliente/list").then(resultado => {
+    axios.get<any>("http://localhost:8080/PROYECTO-REST/rest/autor/list").then(resultado => {
       console.log(resultado.data); 
       if(resultado.data['success']==true){
         this.dataSource = new MatTableDataSource(resultado.data['result']);
@@ -50,7 +50,7 @@ export class ConsultarClienteComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result === true) {
-    axios.delete<any>(`http://localhost:8080/PROYECTO-REST/rest/cliente/delete/${codigo}`).then(resultado => {
+    axios.delete<any>(`http://localhost:8080/PROYECTO-REST/rest/autor/delete/${codigo}`).then(resultado => {
 
       if(resultado.data['success']==true){
      
